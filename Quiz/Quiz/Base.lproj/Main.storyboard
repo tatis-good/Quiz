@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="h7C-Et-cUK">
+            <objects>
+                <navigationController id="D3d-Pt-tdM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ydw-Vj-Cjk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jxa-xi-R2u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3J-S9-4wD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1185" y="15"/>
+        </scene>
         <!--最初の画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -49,6 +65,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMo-o6-owp"/>
+                                    <segue destination="M9n-Uc-kX3" kind="show" id="UPV-wR-76S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,8 +81,10 @@
                             <constraint firstItem="MDQ-Cw-qon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="x7W-nZ-FTC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F2H-OG-v9X"/>
                     <connections>
                         <outlet property="label" destination="6Jm-ML-nGb" id="nVP-QU-KdM"/>
+                        <outlet property="nameTextField" destination="MDQ-Cw-qon" id="ZfK-1S-NMY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,7 +94,7 @@
         <!--クイズ画面-->
         <scene sceneID="9og-XL-Ywm">
             <objects>
-                <viewController title="クイズ画面" id="M9n-Uc-kX3" sceneMemberID="viewController">
+                <viewController title="クイズ画面" id="M9n-Uc-kX3" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H4O-p9-Gcp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +156,10 @@
                             <constraint firstItem="oG1-E7-ton" firstAttribute="centerX" secondItem="H4O-p9-Gcp" secondAttribute="centerX" id="zyV-AL-JiX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iqS-sF-mYm"/>
+                    <connections>
+                        <outlet property="label" destination="OPM-pk-AVw" id="QgH-rj-VGl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsK-8x-TBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

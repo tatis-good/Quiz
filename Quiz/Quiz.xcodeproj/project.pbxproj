@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837132B82BE9E6BB00A0EA06 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837132B72BE9E6BB00A0EA06 /* QuizViewController.swift */; };
 		8392EE1E2BDA2F6E009F190C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392EE1D2BDA2F6E009F190C /* AppDelegate.swift */; };
 		8392EE202BDA2F6E009F190C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392EE1F2BDA2F6E009F190C /* SceneDelegate.swift */; };
 		8392EE222BDA2F6E009F190C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392EE212BDA2F6E009F190C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837132B72BE9E6BB00A0EA06 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		8392EE1A2BDA2F6E009F190C /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8392EE1D2BDA2F6E009F190C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8392EE1F2BDA2F6E009F190C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				8392EE1D2BDA2F6E009F190C /* AppDelegate.swift */,
 				8392EE1F2BDA2F6E009F190C /* SceneDelegate.swift */,
 				8392EE212BDA2F6E009F190C /* ViewController.swift */,
+				837132B72BE9E6BB00A0EA06 /* QuizViewController.swift */,
 				8392EE232BDA2F6E009F190C /* Main.storyboard */,
 				8392EE262BDA2F6F009F190C /* Assets.xcassets */,
 				8392EE282BDA2F6F009F190C /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				8392EE222BDA2F6E009F190C /* ViewController.swift in Sources */,
 				8392EE1E2BDA2F6E009F190C /* AppDelegate.swift in Sources */,
 				8392EE202BDA2F6E009F190C /* SceneDelegate.swift in Sources */,
+				837132B82BE9E6BB00A0EA06 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
