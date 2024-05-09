@@ -8,25 +8,49 @@
 import UIKit
 
 class QuizViewController: UIViewController {
-        @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UILabel!
     var nameText: String = ""
+    
+    @IBOutlet weak var quizcard: QuizCard!
+    
     //View Controller の実装
     override func viewDidLoad() {
         super.viewDidLoad()
-//画面の初期設定やデータのロードをなど行う
+        
+        
+        //画面の初期設定やデータのロードをなど行う
         // Do any additional setup after loading the view.
+        self.quizcard.style = .initial
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuizCard(_:)))
+        self.quizcard.addGestureRecognizer(panGestureRecognizer)
         self.label.text = self.nameText
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func dragQuizCard(_ sender: UIPanGestureRecognizer) {
+        
+        switch sender.state {
+        case .began, .changed:
+            self.transformquizcard(gesture: sender)
+        case .ended:
+            break
+        default:
+            break
+        }
     }
-    */
+    func transformquizcard(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: self.quizcard)
+        let translationTransform = CGAffineTransform(translationX: translation.x, y: translation.y)
+        let translationPerfect = translation.x/UIScreen.main.bounds.width/2
+        let rotationAngle = CGFloat.pi/3 * translationPerfect
+        let rotationTransform = CGAffineTransform(rotationAngle: rotationAngle)
+        let transform = translationTransform.concatenating(rotationTransform)
+        self.quizcard.transform = transform
+        
+        
+        if translation.x > 0 {
+            self.quizcard.style = .right
+        } else {
+                self.quizcard.style = .wrong
+            }
+        }
+    }
 
-}

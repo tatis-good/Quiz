@@ -99,7 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-E7-ton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-E7-ton" customClass="QuizCard" customModule="Quiz" customModuleProvider="target">
                                 <rect key="frame" x="56.666666666666657" y="286" width="280" height="280"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="true" translatesAutoresizingMaskIntoConstraints="NO" id="I5O-Pb-nwW">
@@ -136,6 +136,11 @@
                                     <constraint firstAttribute="height" constant="280" id="m3A-FV-twr"/>
                                     <constraint firstAttribute="width" constant="280" id="oeV-MI-2uV"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="iconImageView" destination="I5O-Pb-nwW" id="Dyq-Zg-i7j"/>
+                                    <outlet property="quizImageView" destination="1Wg-QA-Ft8" id="GBB-hX-K5l"/>
+                                    <outlet property="quizLabel" destination="k87-ft-ssd" id="ATj-V1-5Ot"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-pk-AVw">
                                 <rect key="frame" x="16" y="195.33333333333334" width="361" height="40.666666666666657"/>
@@ -159,6 +164,7 @@
                     <navigationItem key="navigationItem" id="iqS-sF-mYm"/>
                     <connections>
                         <outlet property="label" destination="OPM-pk-AVw" id="QgH-rj-VGl"/>
+                        <outlet property="quizcard" destination="oG1-E7-ton" id="bXB-RD-oKx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsK-8x-TBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
