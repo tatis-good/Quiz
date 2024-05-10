@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830EF7EC2BEDC0D200C0B009 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830EF7EB2BEDC0D200C0B009 /* ResultViewController.swift */; };
 		837132B82BE9E6BB00A0EA06 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837132B72BE9E6BB00A0EA06 /* QuizViewController.swift */; };
 		8392EE1E2BDA2F6E009F190C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392EE1D2BDA2F6E009F190C /* AppDelegate.swift */; };
 		8392EE202BDA2F6E009F190C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392EE1F2BDA2F6E009F190C /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830EF7EB2BEDC0D200C0B009 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		837132B72BE9E6BB00A0EA06 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = SOURCE_ROOT; };
 		8392EE1A2BDA2F6E009F190C /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8392EE1D2BDA2F6E009F190C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		8392EE112BDA2F6E009F190C = {
 			isa = PBXGroup;
 			children = (
+				830EF7EB2BEDC0D200C0B009 /* ResultViewController.swift */,
 				83E05EA92BECA37300B644F5 /* QuizManager.swift */,
 				83E05EA72BEC9E5100B644F5 /* Quiz.swift */,
 				83E05EA52BEC6DF900B644F5 /* QuizCard.swift */,
@@ -153,6 +156,7 @@
 				8392EE222BDA2F6E009F190C /* ViewController.swift in Sources */,
 				8392EE1E2BDA2F6E009F190C /* AppDelegate.swift in Sources */,
 				83E05EA82BEC9E5100B644F5 /* Quiz.swift in Sources */,
+				830EF7EC2BEDC0D200C0B009 /* ResultViewController.swift in Sources */,
 				83E05EAA2BECA37300B644F5 /* QuizManager.swift in Sources */,
 				8392EE202BDA2F6E009F190C /* SceneDelegate.swift in Sources */,
 				83E05EA62BEC6DF900B644F5 /* QuizCard.swift in Sources */,

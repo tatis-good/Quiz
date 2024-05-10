@@ -142,10 +142,8 @@
                                     <outlet property="quizLabel" destination="k87-ft-ssd" id="ATj-V1-5Ot"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-pk-AVw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カードを左右にフリックしてクイズに回答してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPM-pk-AVw">
                                 <rect key="frame" x="16" y="195.33333333333334" width="361" height="40.666666666666657"/>
-                                <string key="text">カードを左右にフリックして
-クイズに回答してください</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -154,10 +152,10 @@
                         <viewLayoutGuide key="safeArea" id="UFP-uT-EUw"/>
                         <color key="backgroundColor" name="Base"/>
                         <constraints>
-                            <constraint firstItem="OPM-pk-AVw" firstAttribute="leading" secondItem="UFP-uT-EUw" secondAttribute="leading" constant="16" id="D1s-0B-sPV"/>
-                            <constraint firstItem="UFP-uT-EUw" firstAttribute="trailing" secondItem="OPM-pk-AVw" secondAttribute="trailing" constant="16" id="Imc-eV-9Oa"/>
-                            <constraint firstItem="oG1-E7-ton" firstAttribute="top" secondItem="OPM-pk-AVw" secondAttribute="bottom" constant="50" id="Qmb-7h-t41"/>
                             <constraint firstItem="oG1-E7-ton" firstAttribute="centerY" secondItem="H4O-p9-Gcp" secondAttribute="centerY" id="b6e-dp-o30"/>
+                            <constraint firstItem="oG1-E7-ton" firstAttribute="top" secondItem="OPM-pk-AVw" secondAttribute="bottom" constant="50" id="hyk-eg-Ci6"/>
+                            <constraint firstItem="OPM-pk-AVw" firstAttribute="leading" secondItem="UFP-uT-EUw" secondAttribute="leading" constant="16" id="j46-ok-pzX"/>
+                            <constraint firstAttribute="trailing" secondItem="OPM-pk-AVw" secondAttribute="trailing" constant="16" id="sZP-ck-T5V"/>
                             <constraint firstItem="oG1-E7-ton" firstAttribute="centerX" secondItem="H4O-p9-Gcp" secondAttribute="centerX" id="zyV-AL-JiX"/>
                         </constraints>
                     </view>
@@ -165,6 +163,7 @@
                     <connections>
                         <outlet property="label" destination="OPM-pk-AVw" id="QgH-rj-VGl"/>
                         <outlet property="quizcard" destination="oG1-E7-ton" id="bXB-RD-oKx"/>
+                        <segue destination="6h6-kP-99d" kind="show" identifier="goToResult" id="Qic-ej-fA0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsK-8x-TBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,7 +173,7 @@
         <!--結果画面-->
         <scene sceneID="5Y8-Ro-cDJ">
             <objects>
-                <viewController title="結果画面" id="6h6-kP-99d" sceneMemberID="viewController">
+                <viewController title="結果画面" id="6h6-kP-99d" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h6j-9l-LRE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,11 +196,23 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="pushResultButton:" destination="6h6-kP-99d" eventType="touchUpInside" id="4Py-BJ-oTc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-5q-AMV">
                                 <rect key="frame" x="16" y="286" width="361" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="pyY-CY-aPC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-Y9-9Se">
+                                <rect key="frame" x="16" y="286" width="361" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="UeO-sy-1OR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -223,6 +234,11 @@
                             <constraint firstItem="fOv-1Q-6Yh" firstAttribute="trailing" secondItem="GUb-1i-wyl" secondAttribute="trailing" constant="16" id="sCt-Hg-LHj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fnC-AI-iih"/>
+                    <connections>
+                        <outlet property="label" destination="LJ9-Y9-9Se" id="gTV-eA-958"/>
+                        <outlet property="textView" destination="GUb-1i-wyl" id="Edl-Hz-ViT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3N0-MS-lJU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
