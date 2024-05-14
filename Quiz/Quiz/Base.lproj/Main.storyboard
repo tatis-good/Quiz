@@ -16,6 +16,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ydw-Vj-Cjk">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" name="normal background"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="right background"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jxa-xi-R2u"/>
@@ -43,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDQ-Cw-qon">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDQ-Cw-qon">
                                 <rect key="frame" x="32" y="449" width="233" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -60,9 +67,15 @@
                                     <constraint firstAttribute="height" constant="30" id="qJL-3R-kso"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="次へ">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMo-o6-owp"/>
                                     <segue destination="M9n-Uc-kX3" kind="show" id="UPV-wR-76S"/>
@@ -195,7 +208,15 @@
                                     <constraint firstAttribute="height" constant="30" id="FJf-l7-xzi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layercornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pushResultButton:" destination="6h6-kP-99d" eventType="touchUpInside" id="4Py-BJ-oTc"/>
                                 </connections>
